@@ -12,7 +12,7 @@ import * as bcryptjs from 'bcryptjs';
 
 import { User } from './entities/user.entity';
 
-import { CreateUserDto, UpdateAuthDto, LoginDto, RegisterUserDto } from './dto';
+import { CreateUserDto, LoginDto, RegisterUserDto } from './dto';
 
 import { JwtPayload } from './interfaces/jwt-payload.interface';
 import { LoginResponse } from './interfaces/login-response.interface';
@@ -76,14 +76,6 @@ export class AuthService {
 
   findOne(id: number) {
     return `This action returns a #${id} auth`;
-  }
-
-  update(id: number, updateAuthDto: UpdateAuthDto) {
-    return `This action updates a #${id} auth`;
-  }
-
-  remove(id: number) {
-    return `This action removes a #${id} auth`;
   }
 
   private handleExceptions(error: any) {
